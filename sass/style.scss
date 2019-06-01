@@ -1,0 +1,685 @@
+/*
+Template Name: Neue
+Theme URI: https://wearekllr.com/demos/neue
+Author: KLLR
+Author URI: https://wearekllr.com/
+Description: An ultra simple HTML template
+Version: 1.0
+Support: https://kllr.ticksy.com
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+01. Base
+  01.1 Typography
+  01.2 Misc
+02. Components
+  02.1 Navigation
+  02.2 Buttons
+  02.3 Forms
+  02.4 Social
+  02.5 Footer
+03. Layout
+  03.1 Home
+  03.2 Work
+  03.3 Single Work
+  03.4 About
+  03.5 Blog
+  03.6 Contact
+  03.7 404
+  03.8 Style Guide
+04. Media Queries
+
+--------------------------------------------------------------*/
+
+@import "partials/variables-mixins";
+
+/*--------------------------------------------------------------
+ 01. Base
+--------------------------------------------------------------*/
+
+/**
+ * 01.1 Typography
+ */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: $color-main-dark;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6em;
+}
+
+a {
+  color: $color-main-dark;
+
+  &:hover {
+    color: $color-main-dark;
+  }
+}
+
+
+/**
+ * 01.2 Misc
+ */
+
+#preloader {
+  background-color: $color-light-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1099;
+}
+
+
+
+/*--------------------------------------------------------------
+ 02. Components
+--------------------------------------------------------------*/
+
+/**
+ * 02.1 Navigation
+ */
+
+.top-bar {
+  background-color: $color-light-bg;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.navbar-default {
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  margin-bottom: 65px;
+
+  .logo {
+    color: $color-main-dark;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 45px;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .navbar-nav>li>a {
+    color: #c5c5c5;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-left: 24px;
+    padding-right: 24px;
+    @include transitions-n(color);
+
+    &:hover {
+      color: $color-main-dark;
+    }
+  }
+
+  .navbar-nav>li>a.current {
+    color: $color-main-dark;
+  }
+}
+
+.dropdown-menu {
+  background-color: $color-main-dark;
+  padding: 25px 15px;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  &>li>a {
+    color: #c5c5c5;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-bottom: 5px;
+
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+  }
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+  background-color: #fff;
+  color: $color-main-dark;
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+}
+
+
+/**
+ * 02.2 Buttons
+ */
+
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 24px 45px;
+  @include transitions;
+}
+
+.btn-default {
+  border-color: #707070;
+
+  &:hover {
+    color: #fff;
+    background-color: $color-main-dark;
+    border-color: $color-main-dark;
+  }
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: $color-main-dark;
+
+  &:hover {
+    color: $color-main-dark;
+    background-color: #fff;
+    border-color: $color-main-dark;
+  }
+}
+
+
+/**
+ * 03.3 Forms
+ */
+
+.form-control {
+  height: 50px;
+  border-radius: 0;
+  border-color: $color-light-text;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+form {
+  label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 28px;
+  }
+
+  .btn {
+    padding: 20px 35px;
+  }
+
+  .btn-default.disabled:hover {
+    background-color: $color-main-dark;
+    color: #fff;
+    border-color: $color-main-dark;
+  }
+}
+
+
+/**
+ * 02.4 Social
+ */
+
+.social {
+  li {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  i {
+    color: #ccc;
+    font-size: 16px;
+    @include transitions-n(color);
+
+    &:hover {
+      color: $color-main-dark;
+    }
+  }
+}
+
+.social-dark {
+  i {
+    color: $color-main-dark;
+  }
+}
+
+
+/**
+ * 02.5 Footer
+ */
+
+footer {
+  background-color: $color-light-bg;
+  padding-top: 70px;
+  padding-bottom: 55px;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  p,
+  li,
+  a {
+    color: $color-light-text;
+    font-size: 14px;
+  }
+
+  li {
+    font-weight: 300;
+    margin-bottom: 6px;
+  }
+
+  .col-md-3 {
+    padding-left: 75px;
+    padding-right: 30px;
+  }
+}
+
+.menu-footer {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 30px;
+
+  a {
+    color: $color-main-dark;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+ 03. Layout
+--------------------------------------------------------------*/
+
+/**
+ * 03.1 Home
+ */
+
+.home {
+  text-align: center;
+
+  .work {
+    text-align: center;
+    margin-top: 30px;
+
+    img {
+      @include center-auto;
+      @include transitions-n(opacity);
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 60px;
+  }
+}
+
+
+.home-2 {
+  .intro {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    p {
+      font-size: 22px;
+      width: 70%;
+      @include center-auto;
+    }
+  }
+
+}
+
+
+/**
+ * 03.2 Work
+ */
+
+.work {
+  padding-bottom: 100px;
+
+  img {
+    @include center-auto;
+    margin-bottom: 30px;
+    @include transitions-n(opacity);
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+
+/**
+ * Single Work
+ */
+
+.single-work {
+  padding-top: 20px;
+  padding-bottom: 100px;
+
+  .description {
+    margin-bottom: 70px;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  img {
+    @include center-auto;
+    margin-bottom: 30px;
+  }
+}
+
+
+/**
+ 03.4 * About
+ */
+
+.about {
+  padding-bottom: 120px;
+
+  .description {
+    background-color: $color-light-bg;
+    padding: 80px 180px;
+  }
+
+  h1 {
+    margin-bottom: 35px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+.about-2 {
+  img {
+    @include center-auto;
+  }
+}
+
+.about-2,
+.about-3 {
+  padding-top: 20px;
+
+  p {
+    margin-bottom: 25px;
+  }
+}
+
+
+/**
+ * 03.5 Blog
+ */
+
+ .blog {
+   padding-bottom: 40px;
+ }
+
+.blog-1,
+.blog-2 {
+  .post-meta {
+    color: $color-light-text;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  article {
+    margin-bottom: 100px;
+  }
+}
+
+.blog-2 {
+  article {
+    margin-bottom: 120px;
+  }
+}
+
+
+/**
+ * 03.6 Contact
+ */
+
+.contact {
+  padding-bottom: 120px;
+
+  form {
+    margin-top: 50px;
+  }
+}
+
+.contact-info-list {
+  span {
+    font-weight: 500;
+  }
+
+  li {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+}
+
+.contact-1 {
+  .contact-info {
+    background-color: $color-light-bg;
+    padding: 55px;
+    margin-top: 80px;
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    .social {
+      margin-top: 15px;
+    }
+  }
+}
+
+.contact-2 {
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .contact-info-list {
+    margin-top: 40px;
+  }
+}
+
+
+/**
+ * 03.7 404 Page
+ */
+
+.page-404 {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 160px;
+
+  h1 {
+    font-size: 290px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 26px;
+  }
+}
+
+
+/**
+ * 03.8 Style Guide
+ */
+
+.style-guide {
+  padding-top: 150px;
+  padding-bottom: 200px;
+
+  .title {
+    color: $color-main-dark;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .section {
+    padding-top: 150px;
+  }
+
+  .section-title {
+    color: $color-main-dark;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+  }
+
+  .colors {
+    .box {
+      width: 165px;
+      height: 165px;
+    }
+  }
+
+  .color-1 {
+    background-color: #222;
+  }
+
+  .color-2 {
+    background-color: #777;
+  }
+
+  .color-3 {
+    background-color: #c5c5c5;
+  }
+
+  .color-4 {
+    background-color: #fafafa;
+  }
+
+  .typography {
+    .font-description {
+      color: $color-main-dark;
+      font-size: 16px;
+      font-weight: 600;
+
+      span {
+        color: $color-light-text;
+      }
+    }
+
+    h1 {
+      margin-top: 40px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .buttons {
+    .box {
+      padding-top: 50px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .box1 {
+      background-color: #f5f5f5;
+    }
+
+    .btn {
+      margin-bottom: 30px;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+
+  .forms {
+    .box {
+      background-color: #f5f5f5;
+      padding: 50px;
+    }
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+ 04. Media Queries
+--------------------------------------------------------------*/
+
+@import "partials/media-queries";

@@ -1,0 +1,38 @@
+$color-main-dark: #222;
+$color-light-text: #777;
+$color-light-bg: #fafafa;
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin preserve3d {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@mixin center-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin transitions {
+  transition: all ease-in-out 300ms;
+  -webkit-transition: all ease-in-out 300ms;
+}
+
+@mixin transitions-n($property) {
+  transition: $property ease-in-out 300ms;
+  -webkit-transition: $property ease-in-out 300ms;
+}
+
+@mixin flex {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}

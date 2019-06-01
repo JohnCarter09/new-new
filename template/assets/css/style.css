@@ -1,0 +1,753 @@
+/*
+Template Name: Neue
+Theme URI: https://wearekllr.com/demos/neue
+Author: KLLR
+Author URI: https://wearekllr.com/
+Description: An ultra simple HTML template
+Version: 1.0
+Support: https://kllr.ticksy.com
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+01. Base
+  01.1 Typography
+  01.2 Misc
+02. Components
+  02.1 Navigation
+  02.2 Buttons
+  02.3 Forms
+  02.4 Social
+  02.5 Footer
+03. Layout
+  03.1 Home
+  03.2 Work
+  03.3 Single Work
+  03.4 About
+  03.5 Blog
+  03.6 Contact
+  03.7 404
+  03.8 Style Guide
+04. Media Queries
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+ 01. Base
+--------------------------------------------------------------*/
+
+/**
+ * 01.1 Typography
+ */
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    color: #222;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+a {
+    color: #222;
+}
+
+a:hover {
+    color: #222;
+}
+
+
+/**
+ * 01.2 Misc
+ */
+
+#preloader {
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1099;
+}
+
+
+
+/*--------------------------------------------------------------
+ 02. Components
+--------------------------------------------------------------*/
+
+/**
+ * 02.1 Navigation
+ */
+
+.top-bar {
+    background-color: #fafafa;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.top-bar ul {
+    margin-bottom: 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+    text-align: center;
+    border: none;
+    margin-bottom: 65px;
+}
+
+.navbar-default .logo {
+    color: #222;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 45px;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.navbar-default .logo:hover {
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #c5c5c5;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: color ease-in-out 300ms;
+    -webkit-transition: color ease-in-out 300ms;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #222;
+}
+
+.navbar-default .navbar-nav > li > a.current {
+    color: #222;
+}
+
+.dropdown-menu {
+    background-color: #222;
+    padding: 25px 15px;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.dropdown-menu > li > a {
+    color: #c5c5c5;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 4px;
+    padding-bottom: 5px;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+
+/**
+ * 02.2 Buttons
+ */
+
+.btn {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 24px 45px;
+    transition: all ease-in-out 300ms;
+    -webkit-transition: all ease-in-out 300ms;
+}
+
+.btn-default {
+    border-color: #707070;
+}
+
+.btn-default:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #222;
+}
+
+.btn-dark:hover {
+    color: #222;
+    background-color: #fff;
+    border-color: #222;
+}
+
+
+/**
+ * 03.3 Forms
+ */
+
+.form-control {
+    height: 50px;
+    border-radius: 0;
+    border-color: #777;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+form label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+form .form-group {
+    margin-bottom: 28px;
+}
+
+form .btn {
+    padding: 20px 35px;
+}
+
+form .btn-default.disabled:hover {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+
+/**
+ * 02.4 Social
+ */
+
+.social li {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.social i {
+    color: #ccc;
+    font-size: 16px;
+    transition: color ease-in-out 300ms;
+    -webkit-transition: color ease-in-out 300ms;
+}
+
+.social i:hover {
+    color: #222;
+}
+
+.social-dark i {
+    color: #222;
+}
+
+
+/**
+ * 02.5 Footer
+ */
+
+footer {
+    background-color: #fafafa;
+    padding-top: 70px;
+    padding-bottom: 55px;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+}
+
+footer p,
+footer li,
+footer a {
+    color: #777;
+    font-size: 14px;
+}
+
+footer li {
+    font-weight: 300;
+    margin-bottom: 6px;
+}
+
+footer .col-md-3 {
+    padding-left: 75px;
+    padding-right: 30px;
+}
+
+.menu-footer {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.copyright a {
+    color: #222;
+}
+
+
+
+/*--------------------------------------------------------------
+ 03. Layout
+--------------------------------------------------------------*/
+
+/**
+ * 03.1 Home
+ */
+
+.home {
+    text-align: center;
+}
+
+.home .work {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home .work img {
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity ease-in-out 300ms;
+    -webkit-transition: opacity ease-in-out 300ms;
+}
+
+.home .work img:hover {
+    opacity: 0.6;
+}
+
+.home .btn {
+    margin-top: 60px;
+}
+
+.home-2 .intro {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.home-2 .intro p {
+    font-size: 22px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/**
+ * 03.2 Work
+ */
+
+.work {
+    padding-bottom: 100px;
+}
+
+.work img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    transition: opacity ease-in-out 300ms;
+    -webkit-transition: opacity ease-in-out 300ms;
+}
+
+.work img:hover {
+    opacity: 0.6;
+}
+
+
+/**
+ * Single Work
+ */
+
+.single-work {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.single-work .description {
+    margin-bottom: 70px;
+}
+
+.single-work h1 {
+    margin-bottom: 40px;
+}
+
+.single-work img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+
+/**
+ 03.4 * About
+ */
+
+.about {
+    padding-bottom: 120px;
+}
+
+.about .description {
+    background-color: #fafafa;
+    padding: 80px 180px;
+}
+
+.about h1 {
+    margin-bottom: 35px;
+}
+
+.about p {
+    margin-bottom: 30px;
+}
+
+.about-2 img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-2,
+.about-3 {
+    padding-top: 20px;
+}
+
+.about-2 p,
+.about-3 p {
+    margin-bottom: 25px;
+}
+
+
+/**
+ * 03.5 Blog
+ */
+
+.blog {
+    padding-bottom: 40px;
+}
+
+.blog-1 .post-meta,
+.blog-2 .post-meta {
+    color: #777;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.blog-1 h2,
+.blog-2 h2 {
+    margin-bottom: 20px;
+}
+
+.blog-1 article,
+.blog-2 article {
+    margin-bottom: 100px;
+}
+
+.blog-2 article {
+    margin-bottom: 120px;
+}
+
+
+/**
+ * 03.6 Contact
+ */
+
+.contact {
+    padding-bottom: 120px;
+}
+
+.contact form {
+    margin-top: 50px;
+}
+
+.contact-info-list span {
+    font-weight: 500;
+}
+
+.contact-info-list li {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.contact-1 .contact-info {
+    background-color: #fafafa;
+    padding: 55px;
+    margin-top: 80px;
+}
+
+.contact-1 .contact-info ul {
+    margin-bottom: 0;
+}
+
+.contact-1 .contact-info .social {
+    margin-top: 15px;
+}
+
+.contact-2 h1 {
+    margin-bottom: 30px;
+}
+
+.contact-2 .contact-info-list {
+    margin-top: 40px;
+}
+
+
+/**
+ * 03.7 404 Page
+ */
+
+.page-404 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 160px;
+}
+
+.page-404 h1 {
+    font-size: 290px;
+    font-weight: 300;
+}
+
+.page-404 p {
+    font-size: 26px;
+}
+
+
+/**
+ * 03.8 Style Guide
+ */
+
+.style-guide {
+    padding-top: 150px;
+    padding-bottom: 200px;
+}
+
+.style-guide .title {
+    color: #222;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.style-guide .section {
+    padding-top: 150px;
+}
+
+.style-guide .section-title {
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+}
+
+.style-guide .colors .box {
+    width: 165px;
+    height: 165px;
+}
+
+.style-guide .color-1 {
+    background-color: #222;
+}
+
+.style-guide .color-2 {
+    background-color: #777;
+}
+
+.style-guide .color-3 {
+    background-color: #c5c5c5;
+}
+
+.style-guide .color-4 {
+    background-color: #fafafa;
+}
+
+.style-guide .typography .font-description {
+    color: #222;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.style-guide .typography .font-description span {
+    color: #777;
+}
+
+.style-guide .typography h1 {
+    margin-top: 40px;
+}
+
+.style-guide .typography h2 {
+    margin-bottom: 15px;
+}
+
+.style-guide .typography h3 {
+    margin-bottom: 20px;
+}
+
+.style-guide .buttons .box {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.style-guide .buttons .box1 {
+    background-color: #f5f5f5;
+}
+
+.style-guide .buttons .btn {
+    margin-bottom: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.style-guide .forms .box {
+    background-color: #f5f5f5;
+    padding: 50px;
+}
+
+
+
+/*--------------------------------------------------------------
+ 04. Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+    .home-2 .intro p {
+        width: 85%;
+    }
+    .about .description {
+        padding: 70px 100px;
+    }
+    .style-guide .colors .box {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .about .description {
+        padding: 50px 70px;
+    }
+    .blog-1 {
+        text-align: center;
+    }
+    .blog-1 img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer {
+        padding-top: 40px;
+    }
+    footer h3 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-default .navbar-toggle {
+        float: none;
+        border: none;
+        margin-right: 0;
+    }
+    .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
+    }
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #222;
+        width: 30px;
+        height: 3px;
+    }
+    .navbar-nav .dropdown-menu {
+        text-align: center;
+    }
+    .home-2 .intro p {
+        width: 100%;
+    }
+    .about .description {
+        padding: 50px 40px;
+    }
+    .page-404 h1 {
+        font-size: 190px;
+    }
+    .page-404 p {
+        font-size: 22px;
+    }
+    .style-guide .colors .box {
+        margin-bottom: 30px;
+    }
+    footer {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    footer .col-md-3 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    footer h3 {
+        margin-top: 35px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about .description {
+        padding: 50px 15px;
+    }
+    .page-404 h1 {
+        font-size: 100px;
+    }
+}
